@@ -29,7 +29,7 @@ body {
   padding: 2.4rem;
 }
 
-/* ******* */
+/* Nav Bar*/
 
 .nav-bar {
   display: grid;
@@ -72,7 +72,7 @@ body {
   padding: 4.8rem;
 }
 
-/* ******* */
+/* Logo and Header */
 
 .logo {
   display: flex;
@@ -138,6 +138,7 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
+  /* Hiding overflow of l=movie list */
   overflow: scroll;
 }
 
