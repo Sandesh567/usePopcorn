@@ -1,25 +1,25 @@
 export default function App() {
-  const [query, setQuery] = useState("");
-  const [selectedId, setSelectedId] = useState(null);
-  const { movies, isLoading, error } = useMovies(query);
+  // const [query, setQuery] = useState("");
+  // const [selectedId, setSelectedId] = useState(null);
+  // const { movies, isLoading, error } = useMovies(query);
 
-  const [watched, setWatched] = useLocalStorageState([], "watched");
+  // const [watched, setWatched] = useLocalStorageState([], "watched");
 
-  function handleSelectMovie(id) {
-    setSelectedId((selectedId) => (id === selectedId ? null : id));
-  }
+  // function handleSelectMovie(id) {
+  //   setSelectedId((selectedId) => (id === selectedId ? null : id));
+  // }
 
-  function handleCloseMovie() {
-    setSelectedId(null);
-  }
+  // function handleCloseMovie() {
+  //   setSelectedId(null);
+  // }
 
-  function handleAddWatched(movie) {
-    setWatched((watched) => [...watched, movie]);
-  }
+  // function handleAddWatched(movie) {
+  //   setWatched((watched) => [...watched, movie]);
+  // }
 
-  function handleDeleteWatched(id) {
-    setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
-  }
+  // function handleDeleteWatched(id) {
+  //   setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
+  // }
 
   return (
     <>
