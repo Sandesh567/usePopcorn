@@ -236,7 +236,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     // setAvgRating(Number(imdbRating));
     // setAvgRating((avgRating) => (avgRating + userRating) / 2);
   }
-
+  //clicking Esc will close the movie tab.
   useKey("Escape", onCloseMovie);
 
   useEffect(
