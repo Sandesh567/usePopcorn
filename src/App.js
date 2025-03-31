@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 // import StarRating from "./StarRating";
-// import { useKey } from "./useKey";
+import { useKey } from "./useKey";
 // import { useLocalStorageState } from "./useLocalStorageState";
 import { useMovies } from "./useMovies";
 
