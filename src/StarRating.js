@@ -5,7 +5,15 @@
 
 
 
+const containerStyle = {
+    display: "flex",
+    alignItems: "center",
+    gap: "16px",
+};
 
+const starContainerStyle = {
+    display: "flex",
+};
 
 
 export default function StarRating({
