@@ -195,3 +195,31 @@ function Search({ query, setQuery }) {
         />
     );
 }
+
+
+
+function NumResults({ movies }) {
+    return (
+        <p className="num-results">
+            Found <strong>{movies.length}</strong> results
+        </p>
+    );
+}
+
+function Main({ children }) {
+    return <main className="main">{children}</main>;
+}
+
+function Box({ children }) {
+    const [isOpen, setIsOpen] = useState(true);
+
+    return (
+        <div className="box">
+            <button className="btn-toggle" onClick={() => setIsOpen((open) => !open)}>
+                {isOpen ? "–" : "+"}
+            </button>
+
+            {isOpen && children}
+        </div>
+    );
+}
