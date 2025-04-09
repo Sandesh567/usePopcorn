@@ -52,6 +52,13 @@ const tempWatchedData = [
 
 
 
+const average = (arr) =>
+    arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+
+const KEY = "f84fc31d";
+
+
+
 
 export default function App() {
     const [query, setQuery] = useState("");
@@ -181,5 +188,48 @@ export default function App() {
                 </Box>
             </Main>
         </>
+    );
+}
+
+
+function Loader() {
+    return <p className="loader">Loading...</p>;
+}
+
+function ErrorMessage({ message }) {
+    return (
+        <p className="error">
+            <span>⛔️</span> {message}
+        </p>
+    );
+}
+
+function NavBar({ children }) {
+    return (
+        <nav className="nav-bar">
+            <Logo />
+            {children}
+        </nav>
+    );
+}
+
+function Logo() {
+    return (
+        <div className="logo">
+            <span role="img">🍿</span>
+            <h1>usePopcorn</h1>
+        </div>
+    );
+}
+
+function Search({ query, setQuery }) {
+    return (
+        <input
+            className="search"
+            type="text"
+            placeholder="Search movies..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+        />
     );
 }
