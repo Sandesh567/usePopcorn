@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-// import StarRating from "./StarRating";
+import StarRating from "./StarRating";
 import { useKey } from "./useKey";
-// import { useLocalStorageState } from "./useLocalStorageState";
+import { useLocalStorageState } from "./useLocalStorageState";
 import { useMovies } from "./useMovies";
 
 const average = (arr) =>
@@ -15,7 +15,7 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
   const { movies, isLoading, error } = useMovies(query);
 
-  // const [watched, setWatched] = useLocalStorageState([], "watched");
+  const [watched, setWatched] = useLocalStorageState([], "watched");
 
   function handleSelectMovie(id) {
     setSelectedId((selectedId) => (id === selectedId ? null : id));
