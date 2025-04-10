@@ -310,11 +310,11 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
             <div className="rating">
               {!isWatched ? (
                 <>
-                  {/* <StarRating
+                  <StarRating
                     maxRating={10}
                     size={24}
                     onSetRating={setUserRating}
-                  /> */}
+                  />
                   {userRating > 0 && (
                     <button className="btn-add" onClick={handleAdd}>
                       + Add to list
@@ -338,12 +338,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     </div>
   );
 }
-
-
-
-
-
-
 
 
 function WatchedSummary({ watched }) {
